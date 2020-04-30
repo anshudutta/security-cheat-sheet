@@ -1,9 +1,9 @@
 # security-cheat-sheet
 
 ## Pricinples
-- Security is everyone's responsibility
-- Follow principle of least priviledge
-- Enfor logging and audit trail for access control
+- Security is everyone's responsibility.
+- Follow principle of least priviledge.
+- Enforce Role Based Access Control with logging and audit trail.
 
 ## Data Centres
 
