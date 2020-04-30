@@ -49,6 +49,8 @@
   - Build logs
 #### OWASP
 - Always test applications for OWASP top 10 vulnerabilities
+
+## Infrastructure
 #### DDOS protection
 
   
