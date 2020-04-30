@@ -44,10 +44,9 @@
 - If the aapplication needs to persist sensitive information, it needs to be encrypted. The encryption key can be queried        again from the vault.
 #### Secret leakage
 - Review code to ensure secrets aren't leaked via
-  a. Application logs
-  b. Error Reports
-  c. Diagnostic reports
-  d. Build logs
+  - Application logs
+  - Error or diagnostic Reports
+  - Build logs
 #### OWASP
 - Always test applications for OWASP top 10 vulnerabilities
 #### DDOS protection
