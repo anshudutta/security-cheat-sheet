@@ -63,7 +63,8 @@ $ nmap -sI 192.168.199.132 -Pn 192.168.199.130
 ```bash
 $ gobuster dir -u http://ip_address:open_port -w /path/to/list
 ```
-### Man-In-Middel Attack
+### Traffic intercept/Man-In-Middel Attack
+#### Configuring BurpSuite
 - Download and install BurpSuite
 - Set up forward proxy in browser
   In firefox Preferences --> General --> Network Settings --> Settings
@@ -76,8 +77,16 @@ $ gobuster dir -u http://ip_address:open_port -w /path/to/list
 #### Spidering
 
 
-#### Dictionary Attack
+#### Brute fore Dictionary Attack
 - Sniper: allows a single payload tried against every input field you select
 - Battering Ram: tries a wordlist across all selected inputs at the same time
 - Pitch Fork: Has 2 wordlists, matches first word with first/second/.. field in 2nd list
 - Cluster Bomb: tries every combination of the the selected wordlists.
+
+Example - DVWA. To launch a dictionary attack, 
+- Open BurpSuite and load the Login page
+- Right click --> Send to Intruder
+- Clcik clear (Clear $) to clear highlighted field
+- Select username and password and click (ADD $)
+- GoTo Payloads, load payload from wordlist
+- Start attack
