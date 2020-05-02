@@ -35,7 +35,10 @@
     ```bash
     some_value' UNION (SELECT user_password, address, 3 FROM users);--
     ```
-    
+Mitigation
+- Use parameterized queries
+- Validate user input
+
 ### Javascript injection
 Can allow the attacker manipulate client side code in the website by injecting malicious javascript via <script></script> tag via an unsanitized user input field
 Typical JS Injection targets are:
@@ -51,6 +54,9 @@ Imagine a product comany with a text field for customer reviews. An attacker can
 ```bash
 <script>document.background-image: url(“other-bad-image.jpg“);</script>
 ```
+Mitigation
+- Sanitize user input
+- Remove `script` tag when saving in database
 ### XSS
   - Reflective
   - persistent
