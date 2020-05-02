@@ -37,12 +37,12 @@
 - Make applications requst secrets from the vault dynamically rather saving credentials in their database
 - Make secerts that are granted to applications ephemeral. 
   For example, if a backend api requires credentials to access database -
-  a. It shoudld be given credentials to query the vault
-  b. The vault will generate an ephemeral username and password granting access to only the resources the application needs
-  c. The crdentials being ephemeral will be invalidated after a certain amount of time
-  d. If the credentials are compromised, an operator needs to invalidate all credentails granted to the application
-  e. In this way, other applications and resources are not compromised
-- If the aapplication needs to persist sensitive information, it needs to be encrypted. The encryption key can be queried        again from the vault.
+  - It shoudld be given credentials to query the vault
+  - The vault will generate an ephemeral username and password granting access to only the resources the application needs
+  - The crdentials being ephemeral will be invalidated after a certain amount of time
+  - If the credentials are compromised, an operator needs to invalidate all credentails granted to the application
+  - In this way, other applications and resources are not compromised
+- If the aapplication needs to persist sensitive information, it needs to be encrypted. The encryption key can be queried       from the vault.
 #### Secret leakage
 - Review code to ensure secrets aren't leaked via
   - Application logs
