@@ -1,4 +1,6 @@
-## Penetration Testing
+# Penetration Testing
+
+## Vulnerability Indentification
 
 ### Port Scanning
 #### nmap
@@ -58,13 +60,15 @@ $ nmap --script=ipidseq 192.168.1.0-255
 # Zombie --> 192.168.199.132, Target --> 192.168.199.130
 $ nmap -sI 192.168.199.132 -Pn 192.168.199.130
 ```
-
 ### Directory scanning
 ```bash
 $ gobuster dir -u http://ip_address:open_port -w /path/to/list
 ```
-### Traffic intercept/Man-In-Middel Attack
-#### Configuring BurpSuite
+
+#### Spidering
+
+## Exploitation
+### Configuring BurpSuite - Web Traffic intercept tool
 - Download and install BurpSuite
 - Set up forward proxy in browser
   In firefox Preferences --> General --> Network Settings --> Settings
@@ -73,9 +77,6 @@ $ gobuster dir -u http://ip_address:open_port -w /path/to/list
   Download Certificate from BurpSuite.
   In firefox, Preferences --> Privacy and Security --> Certificates --> View Certificates --> Import BurpSuite Certificate
 - Start BurpSuite, Proxy --> Intercept --> ON, Check Proxy --> Options
-
-#### Spidering
-
 
 #### Brute fore Dictionary Attack
 - Sniper: allows a single payload tried against every input field you select
