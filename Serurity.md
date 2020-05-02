@@ -64,8 +64,9 @@ $ nmap -sI 192.168.199.132 -Pn 192.168.199.130
 ```bash
 $ gobuster dir -u http://ip_address:open_port -w /path/to/list
 ```
+### Banner Grab
 
-#### Spidering
+### Spidering
 
 ## Exploitation
 ### Configuring BurpSuite - Web Traffic intercept tool
