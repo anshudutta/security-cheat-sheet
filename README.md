@@ -50,6 +50,14 @@
   - Build logs
 #### OWASP
 - Always test applications for OWASP top 10 vulnerabilities
+- SQL Injection
+- Javascript injection
+- XSS
+  - Reflective
+  - persistent
+- CSRF
+- Broken authentication
+- Privilege excalation
 
 ## Infrastructure
 #### DDOS protection
