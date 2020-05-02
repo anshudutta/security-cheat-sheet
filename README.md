@@ -4,6 +4,7 @@
 - Security is everyone's responsibility.
 - Follow principle of least priviledge.
 - Enforce Role Based Access Control with logging and audit trail.
+- Encrypt everything
 
 ## Data Centres
 
