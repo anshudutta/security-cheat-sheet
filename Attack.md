@@ -37,6 +37,20 @@
     ```
     
 ### Javascript injection
+Can allow the attacker manipulate client side code in the website by injecting malicious javascript via <script></script> tag via an unsanitized user input field
+Typical JS Injection targets are:
+- Various forums
+- Article‘s comments fields
+- Guestbooks
+- Any other forms where text can be inserted.
+
+Imagine a product comany with a text field for customer reviews. An attacker can then inject the follwing to alter the look and field of the website for other users, when they load the page
+```bash
+<script>$document.getElementById("some-id").style.visibility="hidden"</script>
+```
+```bash
+<script>document.background-image: url(“other-bad-image.jpg“);</script>
+```
 ### XSS
   - Reflective
   - persistent
