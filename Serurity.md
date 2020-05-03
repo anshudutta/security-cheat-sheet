@@ -117,7 +117,7 @@ Example - passwd command.
 This command is used to change user password and this edits, /etc/passwd and /etc/shadow (permissions only granted to root).
 So passwd command is set with SUID to give root user permissions to normal user so that it can update /etc/shadow and other files.
 
-To find all SUID files, execute
+To find all SUID files, execute (4000 is a special permission for SUID files)
 ```bash
 $ find / -user root -perm -4000 -exec ls -ldb {} \;
 ```
