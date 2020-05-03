@@ -54,6 +54,20 @@
   - Build logs
 ## Infrastructure
 ### Data Centres
+## Servers
+- Disable root login
+- Use sudo to run commands that require root priviledges. Avoid using `su - root` or `sudo` to gain root shell. This is for     better audit trail on who ran what command
+- Disable ssh root logins
+  ```bash
+  $ vim /etc/ssh/sshd_config
+  # PermitRootLogin no
+  $ sudo systemctl reload sshd
+  ```
+- Use one service account per service
+- Deny login, ssh from service accounts
+- Delete unused service account
+- Enforce 2FA with google auth provider or RSA key
+- Use LDAP as login provider
 ### DDOS protection
 ### WAF
 
