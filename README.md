@@ -54,7 +54,7 @@
   - Build logs
 ## Infrastructure
 ### Data Centres
-## Servers
+#### Servers
 - Disable root login
 - Use sudo to run commands that require root priviledges. Avoid using `su - root` or `sudo` to gain root shell. This is for     better audit trail on who ran what command
 - Disable ssh root logins
