@@ -6,8 +6,6 @@
 - Enforce Role Based Access Control with logging and audit trail.
 - Encrypt everything
 
-## Data Centres
-
 ## Employees
 - Enforce least privilege
 - Enforce strong password policy
@@ -28,10 +26,16 @@
   Run git hook on commit to make sure sensitive data is not committed. 
   Refer - https://github.com/awslabs/git-secrets
 - Dependency scanning - Ensure package vulnerability scanning and automatic upgrade
+- Add Security.md file which details security management and escalation
+### Development
+- Always test applications for OWASP top 10 vulnerabilities
+- Enforce Secure Software developmnet Life Cycle
+  - MS Security Development Lifecycle (MS SDL)
+  - NIST 800-64
 ### Managing Secerts
 - Manage secrets in a centralized location. e.g - Hasicorp Valut
 - Enforce rotation of master key
-### Applications
+### Accessing Secrets
 - Applications always granted minimum privilege
 - No sharing secrets between applications, so that one one application is compromised, the blast radius is minimum
 - Make applications requst secrets from the vault dynamically rather saving credentials in their database
@@ -43,15 +47,17 @@
   - If the credentials are compromised, an operator needs to invalidate all credentails granted to the application
   - In this way, other applications and resources are not compromised
 - If the aapplication needs to persist sensitive information, it needs to be encrypted. The encryption key can be queried       from the vault.
-#### Secret leakage
+### Secret leakage
 - Review code to ensure secrets aren't leaked via
   - Application logs
   - Error or diagnostic Reports
   - Build logs
-#### OWASP
-- Always test applications for OWASP top 10 vulnerabilities
-
 ## Infrastructure
-#### DDOS protection
+### Data Centres
+### DDOS protection
+### WAF
+
+## Reporting and Escalation
+
 
   
