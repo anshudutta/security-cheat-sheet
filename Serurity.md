@@ -122,3 +122,8 @@ To find all SUID files, execute (4000 is a special permission for SUID files)
 $ find / -user root -perm -4000 -exec ls -ldb {} \;
 ```
 If system is misconfigured, then you may find `systemctl` misconfigured with SUID priviledge
+
+Using LinPeeas - https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite
+
+Exploit using - https://gtfobins.github.io/
+
