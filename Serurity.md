@@ -104,3 +104,15 @@ To do this we intercept the traffic and then send a list of extensions in the pa
 Click on "Payloads" ---> "Sniper" attack type.
 
 Click the "Payloads" tab now, find the filename and "Add §" to the extension.
+##### Privilege escalation
+Once the attacker gains access to the target machine, he/she will try to escalate priviledge to root.
+
+SUID (Set owner User ID upon execution) is a special type of file permissions given to a file. 
+Normally in Linux/Unix when a program runs, it inherit’s access permissions from the logged in user. 
+SUID is defined as giving temporary permissions to a user to run a program/file with the permissions of the file owner rather that the user who runs it. 
+
+In simple words users will get file owner’s permissions as well as owner UID and GID when executing a file/program/command.
+
+Example - passwd command.
+This command is used to change user password and this edits, /etc/passwd and /etc/shadow (permissions only granted to root).
+So passwd command is set with SUID to give root user permissions to normal user so that it can update /etc/shadow and other files.
