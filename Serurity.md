@@ -121,3 +121,4 @@ To find all SUID files, execute (4000 is a special permission for SUID files)
 ```bash
 $ find / -user root -perm -4000 -exec ls -ldb {} \;
 ```
+If system is misconfigured, then you may find `systemctl` misconfigured with SUID priviledge
