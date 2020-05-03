@@ -116,3 +116,8 @@ In simple words users will get file owner’s permissions as well as owner UID a
 Example - passwd command.
 This command is used to change user password and this edits, /etc/passwd and /etc/shadow (permissions only granted to root).
 So passwd command is set with SUID to give root user permissions to normal user so that it can update /etc/shadow and other files.
+
+To find all SUID files, execute
+```bash
+$ find / -user root -perm -4000 -exec ls -ldb {} \;
+```
