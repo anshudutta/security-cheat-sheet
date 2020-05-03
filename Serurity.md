@@ -79,16 +79,28 @@ $ gobuster dir -u http://ip_address:open_port -w /path/to/list
   In firefox, Preferences --> Privacy and Security --> Certificates --> View Certificates --> Import BurpSuite Certificate
 - Start BurpSuite, Proxy --> Intercept --> ON, Check Proxy --> Options
 
-#### Brute fore Dictionary Attack
+#### Brute fore 
+##### Dictionary Attack
 - Sniper: allows a single payload tried against every input field you select
 - Battering Ram: tries a wordlist across all selected inputs at the same time
 - Pitch Fork: Has 2 wordlists, matches first word with first/second/.. field in 2nd list
 - Cluster Bomb: tries every combination of the the selected wordlists.
 
-Example - DVWA. To launch a dictionary attack, 
+Example - DVWA. 
+To launch a dictionary attack, 
 - Open BurpSuite and load the Login page
 - Right click --> Send to Intruder
 - Clcik clear (Clear $) to clear highlighted field
 - Select username and password and click (ADD $)
 - GoTo Payloads, load payload from wordlist
 - Start attack
+##### Fuzzing
+Fuzz testing or Fuzzing is a Black Box software testing technique, which basically consists in finding implementation bugs using malformed/semi-malformed data injection in an automated fashion.
+
+Example - 
+Consider a website that allows uploading files. To find out what kind of files are allowed, we can launch a fuzz attack using BurpSuite. 
+To do this we intercept the traffic and then send a list of extensions in the payload
+
+Click on "Payloads" ---> "Sniper" attack type.
+
+Click the "Payloads" tab now, find the filename and "Add §" to the extension.
