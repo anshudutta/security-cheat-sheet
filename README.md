@@ -15,10 +15,13 @@
 - Enforce logging and audit trail
 - Enforce use of passphrase in SSH keys
 - Enforce rotation of ssh keys
-- Revoke access tokens and ssh keys when employee leaves company
+- Revoke access tokens and ssh keys when employees leave company
 - Enforce disk encryption
-- Enforce employees to save their individual credentils using a tool like LastPass or 1Password
-- Make sure employees don't publish sensitive information while releasing open source projects
+- Manage individual credentils using a tool like LastPass or 1Password
+- Make sure employees don't inadvertently reveal sensitive information through 
+  - social media 
+  - open source projects
+- Encrypt emails containing sensitive information
 
 ## Applications
 ### Source code
@@ -54,6 +57,7 @@
   - Build logs
 ## Infrastructure
 ### Data Centres
+### Cloud
 #### Servers
 - Disable root login
 - Use sudo to run commands that require root priviledges. Avoid using `su - root` or `sudo` to gain root shell. This is for     better audit trail on who ran what command
@@ -70,6 +74,7 @@
 - Use LDAP as login provider
 - Protect against single user mode attack or bootloader side loading
 - Encrypt disk
+- Regularly update OS packages
 ### DDOS protection
 ### WAF
 
