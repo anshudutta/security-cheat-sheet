@@ -62,14 +62,9 @@
 - Disable root login
 - Use sudo to run commands that require root priviledges. Avoid using `su - root` or `sudo` to gain root shell. This is for     better audit trail on who ran what command
 - Disable ssh root logins
-  ```bash
-  $ vim /etc/ssh/sshd_config
-  # PermitRootLogin no
-  $ sudo systemctl reload sshd
-  ```
-- Use one service account per service
+- Use one service account per service (do not share service accounts across services)
 - Deny login, ssh from service accounts
-- Periodically review and delete unused service and user accounts
+- Periodically review and delete unused accounts
 - Enforce 2FA with google auth provider or RSA key for login
 - Use LDAP as login provider
 - Protect against single user mode attack or bootloader side loading
