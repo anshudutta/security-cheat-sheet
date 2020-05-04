@@ -65,9 +65,11 @@
   ```
 - Use one service account per service
 - Deny login, ssh from service accounts
-- Delete unused service account
-- Enforce 2FA with google auth provider or RSA key
+- Periodically review and delete unused service and user accounts
+- Enforce 2FA with google auth provider or RSA key for login
 - Use LDAP as login provider
+- Protect against single user mode attack or bootloader side loading
+- Encrypt disk
 ### DDOS protection
 ### WAF
 
