@@ -26,6 +26,9 @@ Enum4linux is a tool for enumerating information from Windows and Samba systems.
 ### Hydra
 
 ## Priviledge escalation
-### Linpeas
+### Linpeas 
+- https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite
 ### LinEnum
-
+- https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh
+### gtfobins
+- https://gtfobins.github.io/
