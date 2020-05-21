@@ -14,6 +14,8 @@ $ nmap 10.73.31.1-100
 $ nmap 10.73.31.1/24
 # Decoy
 $ nmap -D RND:10 10.73.31.145
+# timing
+$ nmap -T5 ip_address
 ```
 #### Nmap Scripting Engine
 ```
