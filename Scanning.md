@@ -82,7 +82,7 @@ $ nmap -sS <ip_address>
 ```
 #### Vulnerability Scanning
 ```
-$ nmap --script=vulners.nse <ip_address> 
+$ nmap -A --script=vuln <ip_address> 
 ```
 ### Directory scanning
 ```bash
