@@ -60,6 +60,17 @@ $ nmap --script=ipidseq 192.168.1.0-255
 # Zombie --> 192.168.199.132, Target --> 192.168.199.130
 $ nmap -sI 192.168.199.132 -Pn 192.168.199.130
 ```
+#### Stealth Scan
+```
+# Attack --> SYN --> Target
+# Target --> SYN/ACK --> Attack (port open)
+# Attack --> RST --> Target
+# OR
+# Attack --> SYN --> Target
+# Target --> RST --> Attack (port closed)
+$ nmap -sS <ip_address>
+```
+
 ### Directory scanning
 ```bash
 $ gobuster dir -u http://ip_address:open_port -w /path/to/list
