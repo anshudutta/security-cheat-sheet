@@ -1,4 +1,8 @@
-## BurpSuite 
+## Web scanning
+
+### OWASP ZAP
+
+### BurpSuite 
 Web Traffic intercept tool
 - Download and install BurpSuite
 - Set up forward proxy in browser
@@ -8,3 +12,20 @@ Web Traffic intercept tool
   Download Certificate from BurpSuite.
   In firefox, Preferences --> Privacy and Security --> Certificates --> View Certificates --> Import BurpSuite Certificate
 - Start BurpSuite, Proxy --> Intercept --> ON, Check Proxy --> Options
+
+### Nikito
+
+### Metasploit
+
+## SAMBA / SMB
+### Enum4Linux
+Enum4linux is a tool for enumerating information from Windows and Samba systems. It attempts to offer similar functionality to enum.exe formerly available from www.bindview.com.
+
+## Brute Force authentication
+
+### Hydra
+
+## Priviledge escalation
+### Linpeas
+### LinEnum
+
