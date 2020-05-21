@@ -5,8 +5,16 @@
 ### Port Scanning
 #### nmap
 ```bash
-# -sV - service version
-# -O - OS information
+# -sV      ---> service version
+# -O       ---> OS information
+# -p-      ---> scan every port
+# -A       ---> aggressive
+# --script ---> script
+# -v       ---> verbose
+# -T5      ---> interrval
+# -Pn      ---> exclude ping
+# -n       ---> don't resolve dns
+
 $ nmap -sV -O -n <ip address>
 # Scan IP range
 $ nmap 10.73.31.1-100
