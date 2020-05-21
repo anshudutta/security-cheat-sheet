@@ -1,4 +1,4 @@
-## Web scanning
+## Vulnerability scanning
 
 ### OWASP ZAP
 
@@ -17,9 +17,10 @@ Web Traffic intercept tool
 
 ### Metasploit
 
-## SAMBA / SMB
+## Enumeration
 ### Enum4Linux
 Enum4linux is a tool for enumerating information from Windows and Samba systems. It attempts to offer similar functionality to enum.exe formerly available from www.bindview.com.
+### nmap
 
 ## Brute Force authentication
 
