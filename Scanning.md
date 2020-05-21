@@ -70,7 +70,10 @@ $ nmap -sI 192.168.199.132 -Pn 192.168.199.130
 # Target --> RST --> Attack (port closed)
 $ nmap -sS <ip_address>
 ```
-
+#### Vulnerability Scanning
+```
+$ nmap --script=vulners.nse <ip_address> 
+```
 ### Directory scanning
 ```bash
 $ gobuster dir -u http://ip_address:open_port -w /path/to/list
