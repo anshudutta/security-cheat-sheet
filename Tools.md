@@ -96,4 +96,19 @@ Commonly used Modules
 Scan using nmap
 ```
 $ db_nmap -sV BOX-IP
+# list all hosts saved after scanning
+$ hosts
+# List all services
+$ services
+# List all scanned vulnerabilities
+$ vuln
+```
+Module
+```
+# Search
+$ search multi/handler
+$ use 6
+
+# use a module
+$ use <modulename>
 ```
