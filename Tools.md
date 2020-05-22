@@ -85,3 +85,15 @@ $ db_status
 # Help
 $ ?
 ```
+Commonly used Modules
+- Exploit     Holds all of the exploit code we will use
+- Payload     Contains the various bits of shellcode we send to have executed following exploitation
+- Encoder     Obfuscating payloads
+- NOP         Buffer Overflow/ ROP attacks
+- Auxillary   Scanning and verification machines are exploitable
+- Post        After exploit pillage
+
+Scan using nmap
+```
+$ db_nmap -sV BOX-IP
+```
