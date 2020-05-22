@@ -1,8 +1,9 @@
 ## Enumeration
+### nmap - Port Scanning
+Check what ports are open
+
 ### Enum4Linux - SMB/Samab
 Enum4linux is a tool for enumerating information from Windows and Samba systems. It attempts to offer similar functionality to enum.exe formerly available from www.bindview.com.
-
-### nmap - Port Scanning
 
 ## Vulnerability scanning
 
