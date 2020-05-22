@@ -1,3 +1,7 @@
+## Common Vulnerability & Exposure
+- https://www.cvedetails.com/
+- https://cve.mitre.org/
+
 ## Enumeration
 ### nmap - Port Scanning
 Check what ports are open
