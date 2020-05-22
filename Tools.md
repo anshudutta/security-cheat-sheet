@@ -62,7 +62,6 @@ ftp / protocol          Sets the protocol
 $ hydra -t 4 -l <user> -P /usr/share/wordlists/rockyou.txt -vV <ip> <protocol>
 ```
 ## Priviledge escalation
-
 ### Reverse shell
 https://redteamtutorials.com/2018/10/24/msfvenom-cheatsheet/
 
@@ -72,3 +71,17 @@ https://redteamtutorials.com/2018/10/24/msfvenom-cheatsheet/
 - https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh
 ### gtfobins
 - https://gtfobins.github.io/
+
+## Metasploit
+```
+# Initialize database
+$ msfdb init
+# Check help
+$ msfconsole -h
+# Start console
+$ msfconsole -q
+# Check database status
+$ db_status
+# Help
+$ ?
+```
