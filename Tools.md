@@ -59,7 +59,7 @@ Hydra is a very fast online password cracking tool, which can perform rapid dict
 
 ftp / protocol          Sets the protocol
 
-hydra -t 4 -l dale -P /usr/share/wordlists/rockyou.txt -vV <ip> <protocol>
+$ hydra -t 4 -l <user> -P /usr/share/wordlists/rockyou.txt -vV <ip> <protocol>
 ```
 ## Priviledge escalation
 
