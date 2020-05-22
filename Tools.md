@@ -33,6 +33,10 @@ Web Traffic intercept tool
 ### Hydra
 
 ## Priviledge escalation
+
+### Reverse shell
+https://redteamtutorials.com/2018/10/24/msfvenom-cheatsheet/
+
 ### Linpeas 
 - https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite
 ### LinEnum
