@@ -104,6 +104,10 @@ Commonly used Modules
 - Auxillary   Scanning and verification machines are exploitable
 - Post        After exploit pillage
 
+Connect using netcat
+```
+$ msf5 connect <ip_address>
+```
 Scan using nmap
 ```
 $ db_nmap -sV BOX-IP
@@ -111,8 +115,6 @@ $ db_nmap -sV BOX-IP
 $ hosts
 # List all services
 $ services
-# List all scanned vulnerabilities
-$ vuln
 ```
 Module
 ```
@@ -122,4 +124,13 @@ $ use 6
 
 # use a module
 $ use <modulename>
+
+# show options --> show what variables can be set
+$ set <var> < value>
+# set global variable (preserves value when switch modules)
+$ setg <var> <value>
+# get value of variables
+$ get <var>
+
 ```
+
