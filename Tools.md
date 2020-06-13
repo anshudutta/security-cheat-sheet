@@ -59,6 +59,17 @@ $ hydra -t 4 -l <user> -P /usr/share/wordlists/rockyou.txt -vV <ip> <protocol>
 
 $ hydra -t 4 -l <user> -P /usr/share/wordlists/rockyou.txt -vV <ip> htp-get /path/
 ```
+### Priviledge escalation
+#### Reverse shell
+https://redteamtutorials.com/2018/10/24/msfvenom-cheatsheet/
+
+#### Linpeas 
+- https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite
+#### LinEnum
+- https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh
+#### gtfobins
+- https://gtfobins.github.io/
+
 ### OWASP ZAP
 
 ### BurpSuite 
@@ -71,18 +82,8 @@ Web Traffic intercept tool
   Download Certificate from BurpSuite.
   In firefox, Preferences --> Privacy and Security --> Certificates --> View Certificates --> Import BurpSuite Certificate
 - Start BurpSuite, Proxy --> Intercept --> ON, Check Proxy --> Options
-## Priviledge escalation
-### Reverse shell
-https://redteamtutorials.com/2018/10/24/msfvenom-cheatsheet/
 
-### Linpeas 
-- https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite
-### LinEnum
-- https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh
-### gtfobins
-- https://gtfobins.github.io/
-
-## Metasploit
+### Metasploit
 ```
 # Initialize database
 $ msfdb init
