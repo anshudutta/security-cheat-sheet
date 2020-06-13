@@ -107,6 +107,8 @@ $ db_nmap -sV BOX-IP
 $ hosts
 # List all services
 $ services
+# List all vulnerabilities
+$ vulns
 ```
 Commonly used Modules
 - Exploit     Holds all of the exploit code we will use
