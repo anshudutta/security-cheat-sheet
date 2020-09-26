@@ -57,7 +57,7 @@
   - Build logs
 ### Containers
 #### Docker
-- Verify authenticity - Valid checksums, download over HTTPS, Valid GPG keys
+- Verify authenticity when downloading images - valid checksums, download over HTTPS, valid GPG keys
 - Always use private registry to store your images unless you want them to be public
 - Pin versions for images, DO NOT use `latest`
 - Pin versions for packages installed on the images
@@ -67,9 +67,11 @@
 - DO NOT run `ssh` inside your container
 - If neeed you can run containers in `priviledged` mode
 - Always specify capabilities by using the `--add-cap` flag to give specific capabilities to the docker container
+- Always use an image linter to lint DOckerfile. e.g - https://github.com/hadolint/hadolint
+- Always scan images for vulnerabilities before pushing into registry. eg - https://github.com/aquasecurity/trivy
 
 ### Kubernetes
-TBA
+- TBA
 
 ## Infrastructure
 ### Data Centres
