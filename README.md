@@ -2,8 +2,8 @@
 
 ## Pricinples
 - Security is everyone's responsibility.
+- Security is a journey, not a destination.
 - Follow principle of least priviledge.
-- Enforce Role Based Access Control with logging and audit trail.
 - Encrypt everything
 
 ## Employees
