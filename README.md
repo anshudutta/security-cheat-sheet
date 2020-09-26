@@ -55,12 +55,29 @@
   - Application logs
   - Error or diagnostic Reports
   - Build logs
+### Containers
+#### Docker
+- Verify authenticity - Valid checksums, download over HTTPS, Valid GPG keys
+- Always use private registry to store your images unless you want them to be public
+- Pin versions for images, DO NOT use `latest`
+- Pin versions for packages installed on the images
+- Never run as root, Use `USER` directive to specify a user when running containers
+- Use `gosu` NOT `sudo`
+- Use minimal base images e.g. alpine
+- DO NOT run `ssh` inside your container
+- If neeed you can run containers in `priviledged` mode
+- Always specify capabilities by using the `--add-cap` flag to give specific capabilities to the docker container
+
+### Kubernetes
+TBA
+
 ## Infrastructure
 ### Data Centres
 ### Cloud
 ### Servers
 - Disable root login
-- Use sudo to run commands that require root priviledges. Avoid using `su - root` or `sudo` to gain root shell. This is for     better audit trail on who ran what command
+- Use sudo to run commands that require root priviledges. Avoid using `su - root` or `sudo` to gain root shell. 
+  This is for better audit trail on who ran what command
 - Disable ssh root logins
 - Use one service account per service (do not share service accounts across services)
 - Deny login, ssh from service accounts
