@@ -71,7 +71,25 @@
 - Always scan images for vulnerabilities before pushing into registry. eg - https://github.com/aquasecurity/trivy
 
 ### Kubernetes
-- TBA
+#### Users Accounts
+- Create user groups like - administrators, developers, etc
+- Use K8's RBAC to implement fine grained control for user groups
+#### Pods
+- Run pods on least priviledged mode controlled by RBAC
+- Use Pods `securityContext` to set `rusAsUser` where necessary for all containers inside the pod
+- Use container's `securityContext` to limit prvililedges for that container
+- Use `capabilities` to limit priviledges
+#### Service
+- Use ingress controllers to define ingress into the controllers, make sure only required number of ports are open for ingress traffic
+- Make services `ClusterIp` by default
+#### Network Policies
+- Use network policies to defined how pods accept ingress and egress traffic.
+  For example - ALLOW DB pod to accept traffic from Backend API only
+#### Service Mesh
+Use a service mesh to impletment ZERO TRUST NETWORK
+- Mutual TLS
+- Network Policy (implemented at edge of the service mesh that defines which pods and talk to what)
+- Egress traffic Monitoring (Enforce strict policy on directing traffic leaving the cluster to be forwarded via a proxy)
 
 ## Infrastructure
 ### Data Centres
