@@ -1,5 +1,5 @@
 # security-cheat-sheet
-Security nest practices
+Security best practices
 
 ## Pricinples
 - Security is everyone's responsibility.
