@@ -31,6 +31,7 @@ Security best practices
   Refer - https://github.com/awslabs/git-secrets
 - Dependency scanning - Ensure package vulnerability scanning and automatic upgrade
 - Add Security.md file which details security management and escalation
+- `contfest` to enforce configuration policy
 ### Development
 - Always test applications for OWASP top 10 vulnerabilities
 - Enforce Secure Software developmnet Life Cycle
@@ -68,7 +69,7 @@ Security best practices
 - DO NOT run `ssh` inside your container
 - If neeed you can run containers in `priviledged` mode
 - Always specify capabilities by using the `--add-cap` flag to give specific capabilities to the docker container
-- Always use an image linter to lint DOckerfile. e.g - https://github.com/hadolint/hadolint
+- Always use an image linter to lint `Dockerfile`. e.g - https://github.com/hadolint/hadolint
 - Always scan images for vulnerabilities before pushing into registry. eg - https://github.com/aquasecurity/trivy
 
 ### Kubernetes
@@ -95,6 +96,8 @@ Use a service mesh to impletment ZERO TRUST NETWORK
 ## Infrastructure
 ### Data Centres
 ### Cloud
+- Dedicated group of organisation admins who manage cloud accounts
+- Enforce organisation wide security policy defining constraints on cloud resources
 ### Servers
 - Disable root login
 - Use sudo to run commands that require root priviledges. Avoid using `su - root` or `sudo` to gain root shell. 
